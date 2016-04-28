@@ -7,21 +7,24 @@ He can still start and end at any two (different) locations he wants, and he sti
 For example, given the distances above, the longest route would be 982 via (for example) Dublin -> London -> Belfast.
 
 What is the distance of the longest route?
-
 */
-//We take the previous code from part 1, change shortest_route() name to longest and add minus sign on lines 20 & 21 infront of distance()
+
+
+// We take the previous code from part 1, change "shortest" to "longest", "min" to "max" in the shortest_route()
+// and add minuses on lines 20 & 21 infront of distance()
+// That easy!
 
 var longest_route = function(z) {
-	var min, the_order, i, x;
-	min = 10000; 
+	var max, the_order, i, x;
+	max = 10000; 
 	the_order = order(); 
 	for (i = 0; i < 40320; i++) {
 		x = the_order[i];
-		if (-distance(x, z) < min) {
-			min = -distance(x, z);
+		if (-distance(x, z) < max) {
+			max = -distance(x, z);
 			console.log("x is "+x);
 		}
 	}
-	return min; 
+	return max; 
 }	
 
