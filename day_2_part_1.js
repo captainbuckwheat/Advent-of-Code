@@ -42,7 +42,7 @@ var total_paper = function(q) {
 }
 
 var test = function() {
-  if (total_paper('2x3x4 1x1x10')!==101)  {
+  if (total_paper('2x3x4 1x1x10')!==101) {
     console.log('test has failed');
   } else {
     console.log('it works like a fkn clock!')
