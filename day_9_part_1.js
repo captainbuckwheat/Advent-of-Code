@@ -77,14 +77,14 @@ var distance = function(a, z) {
 	return sum;
 }
 
-var shortest_way = function(z) {
+var shortest_route = function(z) {
 	var min, the_order, i, x;
 	min = 10000; 
 	the_order = order(); 
 	for (i = 0; i < 40320; i++) {
 		x = the_order[i];
-		if (-distance(x, z) < min) {
-			min = -distance(x, z);
+		if (distance(x, z) < min) {
+			min = distance(x, z);
 			console.log("x is "+x);
 		}
 	}
