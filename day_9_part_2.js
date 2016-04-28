@@ -9,9 +9,9 @@ For example, given the distances above, the longest route would be 982 via (for 
 What is the distance of the longest route?
 
 */
-// We take the previous code for part 1 and just add a minus infront of the distance function in the shortest_route:
+//We take the previous code from part 1, change shortest_route() name to longest and add minus sign on lines 20 & 21 infront of distance()
 
-var shortest_route = function(z) {
+var longest_route = function(z) {
 	var min, the_order, i, x;
 	min = 10000; 
 	the_order = order(); 
