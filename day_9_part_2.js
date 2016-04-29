@@ -1,4 +1,4 @@
-/* RFERER TO day_9_data.js FOR THE INPUT
+/* RFERER TO day_9_data.js TO GET THE INPUT
 
 The next year, just to show off, Santa decides to take the route with the longest distance instead.
 
