@@ -28,8 +28,6 @@ var parse_instr = function(s) {
   var string, k, first_xy, first_x, first_y, second_xy, second_x, second_y, instr;
   string = s.split(" ");
   instr  = [];
-  console.log("string.length is "+string.length);
-  if (string.length === 1) debugger; 
   if (string.length === 5) {
     k = 2;
   } else if (string.length === 4) {
