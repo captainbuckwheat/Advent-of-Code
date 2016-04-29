@@ -13,21 +13,20 @@ If your secret key is pqrstuv, the lowest number it combines with to make an MD5
               -----PART 2------
               
 Now find one that starts with six zeroes.
- - for the second part we change 5 to 6 in hash()
-
+ 
 */
 
 
-var hash = function(a) {
+var hash = function(a, n) { // where a is an input and n is the number of zeroes
   var i, s, x, num_zeroes; 
   for (i = 1; i < 999999999; i++) {
     x = md5(a + i); 
     num_zeroes = 0; 
-    for (s = 0; s < 5; s++) {
+    for (s = 0; s < n; s++) {
       if (x[s] === "0") {
         num_zeroes += 1; 
         }
-        if (num_zeroes === 5) {
+        if (num_zeroes === n) {
           return i; 
         }
       }
@@ -35,7 +34,7 @@ var hash = function(a) {
   };
   
   var test_hash = function() {
-    if (JSON.stringify(hash("ckczppom")) !== "117946") {
+    if (JSON.stringify(hash("ckczppom", 5)) !== "117946") {
       console.log("test has failed! wanted 117946 and got " + hash("ckczppom"));
     } else {
       console.log("it works like a fkn clock!")
