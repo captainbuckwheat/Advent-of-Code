@@ -1,4 +1,4 @@
-/* REFER TO day_1_data.js for input
+/* REFER TO day_1_data.js to get the input
  Santa was hoping for a white Christmas, but his weather machine's "snow" function is powered by stars, and he's fresh out! 
  To save Christmas, he needs you to collect fifty stars by December 25th.
  
@@ -29,27 +29,27 @@
   To what floor do the instructions take Santa? */
   
   
-var count = function(x){
+var count = function(x) {
 	var x, sum, i;
 	var sum = 0;
 	var i = 0;
-	while (i < x.length){
-		if (x[i]==="("){
+	while (i < x.length) {
+		if (x[i] === "(") {
 			sum = sum + 1;
-		}else if (x[i]===")"){
+		}else if (x[i] === ")") {
 			sum = sum - 1; 
 		}
 		i = i + 1;
 	}
-	return(sum);
+	return sum;
 };
 
 var test = function(){
-	if(count('(())')!==0){
+	if(count('(())') !== 0) {
 		console.log('test has failed #1');
-	}else if (count('(()(()(')!==3){
+	} else if (count('(()(()(') !== 3) {
 		console.log('test has failed #2');
-	}else{
+	} else {
 		console.log('it works like a fkn clock!');
 	}
 };
