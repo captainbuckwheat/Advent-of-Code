@@ -21,13 +21,13 @@ var houses = function(q) {
   a["0, 0"] = 1; 
   i = 0; 
   while (i < q.length) {
-    if (q[1] === "^") {
+    if (q[i] === "^") {
       y = y + 1;
-    } else if (q[1] === "v") {
+    } else if (q[i] === "v") {
       y = y - 1; 
-    } else if (q[1] === ">") {
+    } else if (q[i] === ">") {
       x = x + 1;
-    } else if (q[1] === "<") {
+    } else if (q[i] === "<") {
       x = x - 1; 
     }
     a[x + " ," +y] = 1; 
