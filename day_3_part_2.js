@@ -1,4 +1,4 @@
-/* REFER TO day_3_data.js TO GET INPUT 
+/* REFER TO day_3_data.js TO GET THE INPUT 
 
 The next year, to speed up the process, Santa creates a robot version of himself, Robo-Santa, to deliver presents with him.
 
