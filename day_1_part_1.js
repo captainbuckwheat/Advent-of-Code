@@ -1,4 +1,4 @@
-/* REFER TO day_1_data.js to get the input
+/* REFER TO day_1_data.js TO GET THE INPUT
  Santa was hoping for a white Christmas, but his weather machine's "snow" function is powered by stars, and he's fresh out! 
  To save Christmas, he needs you to collect fifty stars by December 25th.
  
