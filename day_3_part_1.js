@@ -1,4 +1,4 @@
-/* REFER TO day_3_data.js TO GET INPUT
+/* REFER TO day_3_data.js TO GET THE INPUT
 
 Santa is delivering presents to an infinite two-dimensional grid of houses.
 
