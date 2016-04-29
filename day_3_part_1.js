@@ -12,3 +12,29 @@ For example:
 ^>v< delivers presents to 4 houses in a square, including twice to the house at his starting/ending location.
 ^v^v^v^v^v delivers a bunch of presents to some very lucky children at only 2 houses.
 */
+
+var houses = function(q) {
+  var a, i, x, y; 
+  x = 0;
+  y = 0; 
+  a = {}; 
+  a["0, 0"] = 1; 
+  i = 0; 
+  while (i < q.length) {
+    if (q[1] === "^") {
+      y = y + 1;
+    } else if (q[1] === "v") {
+      y = y - 1; 
+    } else if (q[1] === ">") {
+      x = x + 1;
+    } else if (q[1] === "<") {
+      x = x - 1; 
+    }
+    a[x + " ," +y] = 1; 
+    i++;
+  }
+  console.log(Object.keys(a)); 
+  return Object.keys(a).length; 
+}
+
+
