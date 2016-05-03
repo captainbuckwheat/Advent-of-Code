@@ -1,4 +1,4 @@
-/*
+/* REFER TO day_12_data.js TO GET THE INPUT
 Santa's Accounting-Elves need help balancing the books after a recent order. 
 Unfortunately, their accounting software uses a peculiar storage format. That's where you come in.
 They have a JSON document which contains a variety of things: 
