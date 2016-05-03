@@ -14,6 +14,11 @@ abbcegjk fails the third requirement, because it only has one double letter (bb)
 The next password after abcdefgh is abcdffaa.
 The next password after ghijklmn is ghjaabcc, because you eventually skip all the passwords that start with ghi..., since i is not allowed.
 Given Santa's current password (cqkaabcc), what should his next password be?
+
+--- Part Two ---
+
+Santa's password expired again. What's the next one?
+
 */
 
 var alphabet = 'abcdefghijklmnopqrstuvwxyz';  //length 26 from 0 to to 25
