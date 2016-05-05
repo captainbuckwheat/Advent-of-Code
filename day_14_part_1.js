@@ -31,7 +31,7 @@ var reindeer = function(speed, streak, rest, time){
 	time_left = time - (period * occurence); 
 	if (time_left < streak) remainder = time_left * speed; 
 	else remainder = streak * speed; 
-	return Number(remainder + occurence * streak * speed);
+	return remainder + occurence * streak * speed;
 }
 
 var distance = function(input, time) {
@@ -42,10 +42,7 @@ var distance = function(input, time) {
 		streak = Number(input[i].split(" ")[6]);
 		rest = Number(input[i].split(" ")[13]);
 		run = reindeer(speed, streak, rest, time);
-		if (max < run) {
-			max = run; 
-			//console.log ("the raindeer is "+input[i].split(" ")[0]+" and new max is "+max);
-		}
+		if (max < run) max = run; 
 	}
 	return max; 
 }
