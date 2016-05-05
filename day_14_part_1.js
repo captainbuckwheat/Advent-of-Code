@@ -24,7 +24,7 @@ what distance has the winning reindeer traveled?
 */
 
 
-var raindeer = function(speed, streak, rest, time){
+var reindeer = function(speed, streak, rest, time){
 	var period, occurence, time_left, remainder;
 	period = streak + rest;  
 	occurence = Math.floor(time/period); 
@@ -41,7 +41,7 @@ var distance = function(input, time) {
 		speed = Number(input[i].split(" ")[3]);
 		streak = Number(input[i].split(" ")[6]);
 		rest = Number(input[i].split(" ")[13]);
-		run = raindeer(speed, streak, rest, time);
+		run = reindeer(speed, streak, rest, time);
 		if (max < run) {
 			max = run; 
 			//console.log ("the raindeer is "+input[i].split(" ")[0]+" and new max is "+max);
