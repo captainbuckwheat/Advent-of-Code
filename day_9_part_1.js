@@ -35,7 +35,7 @@ var names = function(x) {
 var route = []; 
 
 var order = function() {
-	var x, y, j, num, a;
+	var x, y, j, a;
 	x = 40320;
 	for (i = 0; i < x; i++) route[i]=[];
 	for (j = 0; j < x; j++) {
