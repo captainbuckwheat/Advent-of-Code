@@ -31,3 +31,93 @@ After trying every other seating arrangement in this hypothetical scenario, you 
 
 What is the total change in happiness for the optimal seating arrangement of the actual guest list?
 */
+
+
+
+
+var names = function(x) {
+  if (x === 0) return "Alice";
+  else if (x === 1) return "Bob";
+  else if (x === 2) return "Carol";
+  else if (x === 3) return "David";
+  else if (x === 4) return "Eric";
+  else if (x === 5) return "Frank";
+  else if (x === 6) return "George";
+  else if (x === 7) return "Mallory";
+}
+
+var happiness = [];
+
+var seating_arrangement = function() {
+  var x, y, j, a;
+  x = 40320;
+  for (i = 0; i < x; i++) happiness[i] = [];
+  for (j = 0; j < x; j++) {
+    a = [ 0, 1, 2, 3, 4, 5, 6, 7 ];
+    happiness[j][0] = a.splice(Math.floor(j / 5040), 1)[0];
+    y = j % 5040;
+    happiness[j][1] = a.splice(Math.floor(y / 720), 1)[0];
+    y = j % 720;
+    happiness[j][2] = a.splice(Math.floor(y / 120), 1)[0];
+    y = j % 120;
+    happiness[j][3] = a.splice(Math.floor(y / 24), 1)[0];
+    y = j % 24;
+    happiness[j][4] = a.splice(Math.floor(y / 6), 1)[0];
+    y = j % 6;
+    happiness[j][5] = a.splice(Math.floor(y / 2), 1)[0];
+    y = j % 2;
+    happiness[j][6] = a.splice(y, 1)[0];
+    y = j;
+    happiness[j][7] = a.splice(0, 1)[0];
+  }
+  return happiness;
+};
+
+var level_of_happiness = function(x, text) {
+  var i, j, sum, mood, xx, yy, right, left;
+  sum = 0;
+  mood = [];
+  for (i = 0; i < x.length; i++) mood[i] = names(x[i]);
+  for (i = 0; i < mood.length; i++) {
+    for (j = 0; j < text.length; j++) {
+      right = i + 1;
+      if (right > mood.length - 1) right = 0;
+      if (text[j].split(" ")[0] === mood[i] && text[j].split(" ")[10] === mood[right]) {
+        if (text[j].split(" ")[2] === "gain") {
+          sum += Number(text[j].split(" ")[3]);
+          break;
+        } else {
+          sum -= Number(text[j].split(" ")[3]);
+          break;
+        }
+      }
+    }
+    for (j = 0; j < text.length; j++) {
+      left = i - 1;
+      if (left < 0) left = 7;
+      if (text[j].split(" ")[0] === mood[i] && text[j].split(" ")[10] === mood[left]) {
+        if (text[j].split(" ")[2] === "gain") {
+          sum += Number(text[j].split(" ")[3]);
+          break;
+        } else {
+          sum -= Number(text[j].split(" ")[3]);
+          break;
+        }
+      }
+    }
+  }
+  return sum;
+}
+
+var the_happiest = function(z) {
+  var max, arrangement, i, x;
+  max = 1;
+  arrangement = seating_arrangement();
+  for (i = 0; i < 40320; i++) {
+    x = arrangement[i];
+    if (level_of_happiness(x, z) > max) { max = level_of_happiness(x, z); }
+  }
+  return max;
+}
+
+
