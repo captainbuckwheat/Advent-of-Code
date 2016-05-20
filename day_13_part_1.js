@@ -94,7 +94,7 @@ var level_of_happiness = function(x, text) {
     }
     for (j = 0; j < text.length; j++) {
       left = i - 1;
-      if (left < 0) left = 7;
+      if (left < 0) left = mood.length-1;
       if (text[j].split(" ")[0] === mood[i] && text[j].split(" ")[10] === mood[left]) {
         if (text[j].split(" ")[2] === "gain") {
           sum += Number(text[j].split(" ")[3]);
