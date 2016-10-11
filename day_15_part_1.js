@@ -1,4 +1,5 @@
-/*
+/* REFER TO day_15_data.js TO GET THE INPUT
+
 Today, you set out on the task of perfecting your milk-dunking cookie recipe. All you have to do is find the right balance of ingredients.
 Your recipe leaves room for exactly 100 teaspoons of ingredients. You make a list of the remaining ingredients you could use to finish the recipe (your puzzle input) and their properties per teaspoon:
 capacity (how well it helps the cookie absorb milk)
