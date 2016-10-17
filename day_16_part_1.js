@@ -66,3 +66,4 @@ var guesses = function(a){
 		}
 	}
 }
+
